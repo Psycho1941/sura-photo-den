@@ -139,7 +139,7 @@
     </button>
   </form>
 
-  <p class="mt-6">📧 siraphotoden@gmail.com</p>
+  <p class="mt-6">📧 suraphotoden@gmail.com</p>
   <p>📞 +91 7997756254 / 8978977686</p>
 </section>
 
@@ -169,5 +169,23 @@ Package: ${d.get("package")}`;
 }
 </script>
 <script src="sura.js"></script>
+<!-- NETLIFY STATIC FORM DETECTION (DO NOT REMOVE) -->
+<form
+  name="booking"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  hidden
+>
+  <input type="hidden" name="form-name" value="booking">
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <input type="date" name="booking_date">
+  <select name="package">
+    <option>4 Hrs</option>
+  </select>
+</form>
+
 </body>
 </html>
