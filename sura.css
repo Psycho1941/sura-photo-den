@@ -1,0 +1,99 @@
+/* =========================
+   ROOT & GLOBAL
+========================= */
+:root{
+  --brand:#facc15;
+  --dark:#0b0b0b;
+  --card:#ffffff;
+  --muted:#6b7280;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#1f2937}
+section{scroll-margin-top:90px}
+
+/* =========================
+   NAVBAR + SCROLL SPY
+========================= */
+nav a{position:relative;transition:color .25s}
+nav a.active, nav a:hover{color:var(--brand)}
+nav a::after{
+  content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;
+  background:var(--brand);transition:width .25s
+}
+nav a.active::after, nav a:hover::after{width:100%}
+
+/* =========================
+   HERO
+========================= */
+#home .hero-card{backdrop-filter: blur(6px)}
+.reveal{opacity:0;transform:translateY(18px);transition:.6s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* =========================
+   CARDS
+========================= */
+.card{
+  background:var(--card);border-radius:16px;
+  transition:transform .25s, box-shadow .25s
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+
+/* =========================
+   GALLERY + LIGHTBOX
+========================= */
+#gallery img{
+  border-radius:14px;cursor:pointer;
+  transition:transform .25s, box-shadow .25s
+}
+#gallery img:hover{transform:scale(1.04);box-shadow:0 14px 28px rgba(0,0,0,.22)}
+
+.lightbox{
+  position:fixed;inset:0;background:rgba(0,0,0,.85);
+  display:none;align-items:center;justify-content:center;z-index:60
+}
+.lightbox.show{display:flex}
+.lightbox img{max-width:92vw;max-height:92vh;border-radius:14px}
+.lightbox .btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  color:#fff;font-size:28px;padding:10px;cursor:pointer
+}
+.lightbox .prev{left:14px}
+.lightbox .next{right:14px}
+.lightbox .close{top:14px;right:14px;transform:none}
+
+/* =========================
+   FORM (PREMIUM)
+========================= */
+#contact input,#contact select{
+  transition:border .2s, box-shadow .2s
+}
+#contact input:focus,#contact select:focus{
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px rgba(250,204,21,.25)
+}
+.btn-primary{
+  background:var(--brand);color:#111;font-weight:700;
+  transition:transform .15s, box-shadow .15s
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(250,204,21,.4)}
+.btn-loading{opacity:.7;pointer-events:none}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:55;
+  background:#25D366;color:#fff;border-radius:999px;
+  padding:14px 16px;box-shadow:0 10px 24px rgba(0,0,0,.25)
+}
+.wa-float:hover{filter:brightness(1.05)}
+/* SAFETY FALLBACK */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}

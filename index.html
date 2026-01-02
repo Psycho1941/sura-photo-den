@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SURA PHOTO DEN - Outdoor pre-wedding studio for rent in Munasabpeta" />
+  <title>SURA PHOTO DEN</title>
+
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="sura.css">
+  
+
+</head>
+
+<body class="bg-white text-gray-800 font-[Poppins]">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow z-50 px-6 py-4 flex justify-between items-center">
+  <img src="images/IMG_20250630_054215_295.webp" class="h-10" alt="SURA PHOTO DEN">
+  <div class="hidden md:flex space-x-4 font-semibold">
+    <a href="#home">Home</a>
+    <a href="#packages">Packages</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Booking</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="h-screen bg-cover bg-center flex items-center justify-center text-white"
+ style="background-image:url('https://source.unsplash.com/1600x900/?camera,photo');">
+  <div class="bg-black bg-opacity-60 p-8 rounded-xl text-center mt-20">
+    <h1 class="text-5xl font-bold mb-4">Welcome to <span class="text-yellow-400">SURA PHOTO DEN</span></h1>
+    <p class="text-xl mb-6">Best land for dream clicks</p>
+    <a href="#gallery" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold">Explore Gallery</a>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages" class="py-20 px-6 reveal">
+  <h2 class="text-3xl font-bold text-center mb-10">Our Packages</h2>
+  <div class="grid md:grid-cols-4 gap-8">
+    <div class="p-6 shadow rounded-xl text-center">
+      <h3 class="text-xl font-semibold">1 Hr</h3>
+      <p>₹2999</p>
+    </div>
+    <div class="p-6 shadow rounded-xl text-center">
+      <h3 class="text-xl font-semibold">4 Hrs</h3>
+      <p>₹11,999</p>
+    </div>
+    <div class="p-6 shadow rounded-xl text-center">
+      <h3 class="text-xl font-semibold">6 Hrs</h3>
+      <p>₹17,999</p>
+    </div>
+    <div class="p-6 shadow rounded-xl text-center">
+      <h3 class="text-xl font-semibold">8 Hrs</h3>
+      <p>₹23,999</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-20 px-6 bg-gray-100 reveal">
+  <h2 class="text-3xl font-bold text-center mb-10">Photo Gallery</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+    <img src="images/thenawabsgarden_176676737.jpg" loading="lazy">
+    <img src="images/thenawabsgarden_176676381.jpg" loading="lazy">
+    <img src="images/pavithra_jayram__668058441.jpg" loading="lazy">
+    <img src="images/thenawabsgarden_177602816.jpg" loading="lazy">
+    <img src="images/thenawabsgarden_667808734.jpg" loading="lazy">
+    <img src="images/mahishivan9_official_667919307.jpg" loading="lazy">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 max-w-4xl mx-auto text-center reveal">
+  <h2 class="text-3xl font-bold mb-6">About Our Shoots</h2>
+  <ul class="text-left space-y-2">
+    <li>• Pre-Wedding</li>
+    <li>• Baby / Family</li>
+    <li>• Short Films</li>
+    <li>• Engagement / Post Wedding</li>
+    <li>• Modelling / Movie Shoots</li>
+  </ul>
+
+  <h2 class="text-3xl font-bold mt-10 mb-4">About Us</h2>
+  <p>
+    <strong>SURA PHOTO DEN</strong> offers an exclusive outdoor pre-wedding studio
+    for rent. Bring your own photographer and book your slot to capture memories
+    your way.
+  </p>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">Our Location</h2>
+  <p>Opposite Gurajada Gayatri College, Munasabpeta, 532401</p>
+  <iframe class="w-full h-96 mt-6 rounded-xl"
+    src="https://www.google.com/maps?q=18.320195,83.909348&output=embed"
+    loading="lazy"></iframe>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="contact" class="bg-black text-white py-20 px-6 text-center reveal">
+  <h2 class="text-3xl font-bold mb-6">Book Your Slot</h2>
+
+  <form name="booking" method="POST" data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="booking-form"
+        class="max-w-lg mx-auto space-y-4"
+        onsubmit="handleSubmit(event)">
+
+    <input type="hidden" name="form-name" value="booking">
+    <input type="hidden" name="bot-field">
+
+    <input type="text" name="name" id="name" placeholder="Full Name" required class="w-full p-3 rounded bg-gray-800">
+    <input type="email" name="email" id="email" placeholder="Email" required class="w-full p-3 rounded bg-gray-800">
+    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required class="w-full p-3 rounded bg-gray-800">
+    <input type="date" name="booking_date" id="booking-date" required class="w-full p-3 rounded bg-gray-800">
+
+    <select name="package" id="package" required class="w-full p-3 rounded bg-gray-800">
+      <option value="">Select Package</option>
+      <option>4 Hrs - ₹12,000</option>
+      <option>8 Hrs - ₹21,000</option>
+      <option>12 Hrs - ₹30,000</option>
+      <option>1 Day - ₹55,000</option>
+    </select>
+
+    <button type="submit" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold w-full">
+      Submit Booking
+    </button>
+  </form>
+
+  <p class="mt-6">📧 siraphotoden@gmail.com</p>
+  <p>📞 +91 7997756254 / 8978977686</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center py-4">
+  © 2025 SURA PHOTO DEN. All Rights Reserved.
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const f = document.getElementById("booking-form");
+  const d = new FormData(f);
+
+  fetch("/", { method: "POST", body: d }).then(() => {
+    const msg =
+`New Booking - SURA PHOTO DEN
+Name: ${d.get("name")}
+Phone: ${d.get("phone")}
+Date: ${d.get("booking_date")}
+Package: ${d.get("package")}`;
+
+    window.open("https://wa.me/917997756254?text=" + encodeURIComponent(msg), "_blank");
+    alert("Booking submitted successfully!");
+    f.reset();
+  });
+}
+</script>
+<script src="sura.js"></script>
+</body>
+</html>
