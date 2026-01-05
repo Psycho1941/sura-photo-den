@@ -145,4 +145,32 @@ packages.forEach(pkg => {
 
   list.appendChild(card);
 });
+/* =========================
+   FLOATING SOCIAL LINKS
+========================= */
+const social = document.createElement("div");
+social.className = "social-float";
+
+social.innerHTML = `
+  <a href="https://wa.me/917997756254"
+     target="_blank"
+     class="social-btn social-whatsapp">
+     💬 <span>WhatsApp</span>
+  </a>
+
+  <a href="https://www.instagram.com/suraphotoden?igsh=MXZhMGd5OGgxaTBibQ=="
+     target="_blank"
+     class="social-btn social-instagram">
+     📸 <span>Instagram</span>
+  </a>
+
+  <a href="https://youtube.com/@suraphotoden?si=h9T1dcKpm6uqhIU3"
+     target="_blank"
+     class="social-btn social-youtube">
+     ▶️ <span>YouTube</span>
+  </a>
+`;
+
+document.body.appendChild(social);
+
 

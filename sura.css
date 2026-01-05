@@ -196,4 +196,80 @@ nav a.active::after, nav a:hover::after{width:100%}
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(37,211,102,0.4);
 }
+/* =========================
+   FLOATING SOCIAL BUTTONS
+========================= */
+.social-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+/* Common style */
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+/* Platform colors */
+.social-whatsapp { background: #25D366; }
+.social-instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.social-youtube { background: #FF0000; }
+
+/* Mobile: show icons only */
+@media (max-width: 640px) {
+  .social-btn span {
+    display: none;
+  }
+}
+/* =========================
+   PDF GALLERY SECTION
+========================= */
+.pdf-gallery-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.pdf-text {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 12px 0 24px;
+}
+
+/* PDF Button */
+.pdf-btn {
+  display: inline-block;
+  background: #111827;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.pdf-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
 
