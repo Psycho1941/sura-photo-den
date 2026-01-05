@@ -13,15 +13,122 @@ body{font-family:'Poppins',sans-serif;background:#fff;color:#1f2937}
 section{scroll-margin-top:90px}
 
 /* =========================
-   NAVBAR + SCROLL SPY
+/* =========================
+   NAVBAR LAYOUT
 ========================= */
-nav a{position:relative;transition:color .25s}
-nav a.active, nav a:hover{color:var(--brand)}
-nav a::after{
-  content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;
-  background:var(--brand);transition:width .25s
+nav {
+  display: flex;
+  align-items: center;        /* vertically center logo & links */
+  justify-content: space-between;
+  padding: 16px 28px;         /* gives logo more space */
+  background: #ffffff;
+  z-index: 1000;
 }
-nav a.active::after, nav a:hover::after{width:100%}
+
+/* Logo wrapper */
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* BIG LOGO */
+.nav-logo {
+  height: 68px;               /* ⬅ MAIN SIZE CONTROL */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Desktop enhancement */
+@media (min-width: 768px) {
+  .nav-logo {
+    height: 78px;             /* Bigger on desktop */
+  }
+}
+
+/* =========================
+   NAV LINKS + SCROLL SPY
+========================= */
+nav a {
+  position: relative;
+  transition: color .25s ease;
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--brand);
+}
+
+/* underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: var(--brand);
+  transition: width .25s ease;
+}
+
+nav a.active::after,
+nav a:hover::after {
+  width: 100%;
+}
+/* =========================
+   PREMIUM NAVBAR
+========================= */
+
+/* Base navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  transition: padding 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+  z-index: 1000;
+}
+
+/* Logo */
+.nav-logo {
+  height: 78px;
+  width: auto;
+  transition: height 0.35s ease, transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-links a {
+  font-weight: 600;
+  position: relative;
+}
+
+/* Scroll state */
+#navbar.shrink {
+  background: #ffffff;
+  padding: 12px 32px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+#navbar.shrink .nav-logo {
+  height: 54px;
+}
+
+/* Logo hover */
+.nav-brand:hover .nav-logo {
+  transform: scale(1.06);
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+}
+
 
 /* =========================
    HERO

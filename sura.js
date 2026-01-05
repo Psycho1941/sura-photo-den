@@ -24,6 +24,19 @@ window.addEventListener('scroll', ()=>{
     a.classList.toggle('active', a.getAttribute('href')==='#'+cur);
   });
 });
+/* =========================
+   NAVBAR SCROLL EFFECT
+========================= */
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add("shrink");
+  } else {
+    navbar.classList.remove("shrink");
+  }
+});
+
 
 /* =========================
    LIGHTBOX GALLERY
