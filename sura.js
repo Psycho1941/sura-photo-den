@@ -109,3 +109,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveals.forEach(el => observer.observe(el));
 });
+/* =========================
+   PACKAGE DATA (EDIT HERE ONLY)
+========================= */
+const packages = [
+  { hrs: "1 Hr", old: 3999, price: 2999 },
+  { hrs: "4 Hrs", old: 11999, price: 8999, best: true },
+  { hrs: "6 Hrs", old: 17999, price: 10999 },
+  { hrs: "8 Hrs", old: 23999, price: 14999 }
+];
+
+const whatsappNumber = "917997756254";
+
+/* =========================
+   RENDER PACKAGES
+========================= */
+const list = document.getElementById("packagesList");
+
+packages.forEach(pkg => {
+  const card = document.createElement("div");
+  card.className = "package-card" + (pkg.best ? " best" : "");
+
+  card.innerHTML = `
+    ${pkg.best ? `<span class="badge">🔥 Limited Offer</span>` : ""}
+    <h3>${pkg.hrs}</h3>
+    <p class="old-price">₹${pkg.old.toLocaleString()}</p>
+    <p class="new-price">₹${pkg.price.toLocaleString()}</p>
+    <a class="package-btn" target="_blank"
+      href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        `📸 Booking Enquiry - SURA PHOTO DEN\n\nPackage: ${pkg.hrs}\nOffer Price: ₹${pkg.price}`
+      )}">
+      📲 Book on WhatsApp
+    </a>
+  `;
+
+  list.appendChild(card);
+});
+
