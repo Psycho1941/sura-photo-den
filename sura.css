@@ -379,4 +379,75 @@ nav a:hover::after {
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
+/* Mobile Sticky Booking Bar */
+.mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #25D366;
+  z-index: 999;
+  display: none;
+}
+
+.mobile-cta a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: block;
+  }
+  body {
+    padding-bottom: 60px; /* prevents content hiding */
+  }
+}
+/* Testimonials */
+.testimonials {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.testimonial-list {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: grid;
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  color: #374151;
+  margin: 12px 0;
+}
+
+.testimonial-card span {
+  font-size: 14px;
+  color: #6b7280;
+}
+.map-btn {
+  display: inline-block;
+  margin-top: 16px;
+  background: #111827;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
 
